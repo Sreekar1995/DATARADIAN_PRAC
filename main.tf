@@ -5,7 +5,7 @@ terraform {
 
       # The name of the Terraform Cloud workspace to store Terraform state files in.
       workspaces {
-        name = "DATARADIAN_PRAC"
+        prefix = "dataradian_"
       }
     }
   required_providers {
@@ -23,7 +23,7 @@ provider "snowflake" {
 
 # Example: Creating a Snowflake warehouse
 resource "snowflake_warehouse" "example" {
-  name            = "MY_WAREHOUSE"
+  name            = var.warehouse
   warehouse_size  = "XSMALL"
   auto_suspend    = 60
   auto_resume     = true
@@ -31,12 +31,12 @@ resource "snowflake_warehouse" "example" {
 
 # Example: Creating a Snowflake database
 resource "snowflake_database" "example" {
-  name = "MY_DATABASE"
+  name = var.database_name
 }
 
 # Example: Creating a Snowflake schema
 resource "snowflake_schema" "example" {
   database = snowflake_database.example.name
-  name     = "MY_SCHEMA"
+  name     = var.schema_name
 } 
 
