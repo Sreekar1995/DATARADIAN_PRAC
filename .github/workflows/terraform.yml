@@ -81,7 +81,7 @@ jobs:
     #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
     - name: use env variable
-      env: 
+      run: 
         AWS_BUCKET=${{ vars.AWS_BUCKET }}
         AWS_KEY=${{ vars.AWS_KEY }}
       
