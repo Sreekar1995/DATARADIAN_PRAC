@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    region = "ap-south-1"
+    region = "ap-northeast-1"
   }
   required_providers {
     snowflake = {
