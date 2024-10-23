@@ -82,6 +82,9 @@ jobs:
 
     # - name: export env variable
       # run: export TF_WORKSPACE=${{ env.TF_WORKSPACE }}
+    
+    - name: echo variables
+      run: echo ${{ env.AWS_BUCKET }}
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
