@@ -1,19 +1,14 @@
 terraform {
-  backend "remote" {
-  # The name of your Terraform Cloud organization.
-    organization = "sreekarorg_95"
-
-      # The name of the Terraform Cloud workspace to store Terraform state files in.
-      workspaces {
-        prefix = "dataradian_"
-      }
-    }
+  backend "s3" {
+    region = "ap-south-1"
+  }
   required_providers {
     snowflake = {
       source = "Snowflake-Labs/snowflake"
     }
   }
 }
+
 
 provider "snowflake" {
   account                = "ot78564.ap-southeast-1" //https://ot78564.ap-southeast-1.snowflakecomputing.com # required if not using profile. Can also be set via SNOWFLAKE_ACCOUNT env var
