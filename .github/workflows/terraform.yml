@@ -89,7 +89,7 @@ jobs:
           -backend-config="key=${{ vars.AWS_KEY }}"
           -backend-config="region=ap-south-1"
           -backend-config="access_key=${{ secrets.AWS_ACCESS_KEY_ID }}"
-          -backend-config="secret_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          -backend-config="secret_key=${{ secrets.AWS_SECRET_ACCESS_KEY }}"
     
     # Select environment specific workspace
     # - name: terraform select workspace
