@@ -11,9 +11,9 @@ terraform {
 
 
 provider "snowflake" {
-  account                = "ot78564.ap-southeast-1" //https://ot78564.ap-southeast-1.snowflakecomputing.com # required if not using profile. Can also be set via SNOWFLAKE_ACCOUNT env var
-  user               = "snowflake945" # required if not using profile or token. Can also be set via SNOWFLAKE_USER env var
-  password               = "Satyasree@9550"
+  account = var.sf_account //https://ot78564.ap-southeast-1.snowflakecomputing.com # required if not using profile. Can also be set via SNOWFLAKE_ACCOUNT env var
+  user = var.sf_user # required if not using profile or token. Can also be set via SNOWFLAKE_USER env var
+  password = var.sf_password
 }
 
 # Example: Creating a Snowflake warehouse

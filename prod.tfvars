@@ -1,4 +1,4 @@
-database_name = "prod_db"
-schema_name = "my_schema"
-warehouse = "prod_wh"
+database_name = "PROD_DB"
+schema_name = "MY_SCHEMA"
+warehouse = "PROD_WH"
 env = "prod"
