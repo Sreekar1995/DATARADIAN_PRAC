@@ -56,7 +56,7 @@ jobs:
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
-    environment: dev
+    environment: production
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
@@ -97,7 +97,7 @@ jobs:
        -out=tfplan
        -input=false
        -lock=false
-       -var-file="dev.tfvars"
+       -var-file="prod.tfvars"
        -var sf_account=${{ vars.SNOWFLAKE_ACCOUNT}}
        -var sf_user=${{ vars.SNOWFLAKE_USER}}
        -var sf_password=${{secrets.SNOWFLAKE_PASSWORD}}
