@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    region = "ap-south-1"
+    region = "ap-south-1" #aws key, accesskey, secretkey & region
   }
   required_providers {
     snowflake = {
@@ -11,14 +11,14 @@ terraform {
 
 
 provider "snowflake" {
-  account = var.sf_account //https://ot78564.ap-southeast-1.snowflakecomputing.com # required if not using profile. Can also be set via SNOWFLAKE_ACCOUNT env var
-  user = var.sf_user # required if not using profile or token. Can also be set via SNOWFLAKE_USER env var
+  account = var.sf_account   #SF Acc username password calling it as var and it is in variable.tf
+  user = var.sf_user  
   password = var.sf_password
 }
 
-# Example: Creating a Snowflake warehouse
+# Example: Creating a Snowflake warehouse copied in docx
 resource "snowflake_warehouse" "example" {
-  name            = var.warehouse
+  name            = var.warehouse #parameterised in script for dev/prod for wh & db declared in v.tf
   warehouse_size  = "XSMALL"
   auto_suspend    = 60
   auto_resume     = true
@@ -35,3 +35,4 @@ resource "snowflake_schema" "example" {
   name     = var.schema_name
 } 
 
+#values like wh and db names as per requirements dev & prod are given in dev.tfvars/ prod.tfvars
