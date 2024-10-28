@@ -58,7 +58,7 @@ jobs:
   terraform:
     name: 'Terraform'
     runs-on: ubuntu-latest
-    environment: dev #2)create or mention the env dev/prod
+    environment: dev #2create or mention the env dev/prod
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
