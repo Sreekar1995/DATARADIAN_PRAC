@@ -32,7 +32,7 @@ resource "snowflake_database" "example" {
 # Example: Creating a Snowflake schema
 resource "snowflake_schema" "example" {
   database = snowflake_database.example.name
-  name     = var.schema_name
+  name     = var.schema_name 
 } 
 
-#values like wh and db names as per requirements dev & prod are given in dev.tfvars/ prod.tfvars   
+#values like wh and db names as per requirements dev & prod are given in dev.tfvars/ prod.tfvars
