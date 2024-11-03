@@ -16,9 +16,9 @@ provider "snowflake" {
   password = var.sf_password
 }
 
-# Example: Creating a Snowflake warehouse copied in docx
+# Example: Creating a Snowflake warehouse copied in documentation
 resource "snowflake_warehouse" "example" {
-  name            = var.warehouse #parameterised in script for dev/prod for wh & db declared in v.tf
+  name            = var.warehouse #parameterised in script for dev/prod for wh & db declared in variables.tf
   warehouse_size  = "XSMALL"
   auto_suspend    = 60
   auto_resume     = true
