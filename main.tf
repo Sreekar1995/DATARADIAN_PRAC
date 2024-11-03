@@ -33,5 +33,5 @@ resource "snowflake_database" "example" {
 resource "snowflake_schema" "example" {
   database = snowflake_database.example.name
   name     = var.schema_name
-}  
+}   
 
