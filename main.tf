@@ -35,4 +35,4 @@ resource "snowflake_schema" "example" {
   name     = var.schema_name
 } 
 
-#values like wh and db names as per requirements dev & prod are given in dev.tfvars/ prod.tfvars 
+#values like wh and db names as per requirements dev & prod are given in dev.tfvars/ prod.tfvars   
